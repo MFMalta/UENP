@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * @author Matheus Malta <mathmalta96 at gmail.com>
- * @version 0.5
+ * @version Demo 0.7
  */
 /**
  * ****CLASSE PRINCIPAL******
@@ -20,15 +20,9 @@ public class Main {
     static Battle bt = new Battle();
     static Logs log = new Logs();
     static boolean start;
-    static boolean quitGame = false;//Variável para sair do jogo.
-
-    /**
-     * *******MÉTODO PRINCIPAL*********
-     */
-    /**
-     * @param args
-     * @return boolean
-     */
+    static boolean quitGame = false;//Variável para sair do jogo
+    
+    /***********FUNÇÃO PRINCIPAL***************************/
     public static void main(String[] args) {
         start = true;
         pl = new Player();
@@ -95,6 +89,7 @@ public class Main {
                     drg = new Dragons();
                     drg = bt.genDragon(pl.getLvl());// Chama o método para verificar o nível do jogador.
                     pl = bt.battle(pl, drg);//Vai para a batalaha.
+                    if(pl.isAlive() == false) quitGame = true;
                     break;
                 case 2:
                     pl = pl.meditade(pl);//Chama o método para meditar.
@@ -160,9 +155,7 @@ public class Main {
             //if(aux > pl.getPts()) System.out.println("Erro!");;
             pl.setSpd(aux);
             pl.setPts(pl.getPts() - aux);
-            System.out.println(""
-                    + ""
-                    + "");
+            System.out.println("\n\n\n");
         } while (pl.getSpd() < 0);
 
         return pl;

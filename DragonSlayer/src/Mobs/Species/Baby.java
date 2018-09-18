@@ -26,28 +26,28 @@ public class Baby extends Dragons {
         switch (aux) {
             case 1://Balanceado
                 this.name = "Dragao Bebê";
-                this.maxHp = 6 * 5;
-                this.atk = 6;
-                this.def = 6;
-                this.spd = 6;
+                this.maxHp = 5 * 5;
+                this.atk = 5;
+                this.def = 5;
+                this.spd = 5;
                 this.id = "BBD-001";
                 this.xpd = 5 * dragLvl;
                 break;
             case 2://atk++,spd+,def-,hp--
-                this.name = "Dragao Bebê Vermelho";
-                this.maxHp = (6 + this.mns2) * 5;
-                this.atk = 6 + this.pls2;
-                this.def = 6 + this.mns;
-                this.spd = 6 + this.pls;
+                this.name = "Dragao Bebê Furioso";
+                this.maxHp = (5 + this.mns2) * 5;
+                this.atk = 5 + this.pls2;
+                this.def = 5 + this.mns;
+                this.spd = 5 + this.pls;
                 this.id = "BBD-002";
                 this.xpd = 7 * dragLvl;
                 break;
             case 3://atk--,spd-,def++,hp+
-                this.name = "Dragao Bebê Azul";
-                this.maxHp = (6 + this.pls) * 5;
-                this.atk = 6 + this.mns2;
-                this.def = 6 + this.pls2;
-                this.spd = 6 + this.mns;
+                this.name = "Dragao Bebê Irritado";
+                this.maxHp = (5 + this.pls) * 5;
+                this.atk = 5 + this.mns2;
+                this.def = 5 + this.pls2;
+                this.spd = 5 + this.mns;
                 this.id = "BBD-003";
                 this.xpd = 6 * dragLvl;
                 break;

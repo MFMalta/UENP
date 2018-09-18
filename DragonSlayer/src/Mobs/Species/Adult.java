@@ -28,7 +28,7 @@ public class Adult extends Dragons {
                 this.xpd = 10 * dragLvl;
                 break;
             case 2://atk++,spd+,def-,hp--
-                this.name = "Dragão Ruby";
+                this.name = "Dragão Ruby Furioso";
                 this.maxHp = (8 + this.mns2) * 5;
                 this.atk = 8 + this.pls2;
                 this.def = 8 + this.mns;
@@ -37,7 +37,7 @@ public class Adult extends Dragons {
                 this.xpd = 14 * dragLvl;
                 break;
             case 3://atk--,spd-,def++,hp+
-                this.name = "Dragão Sáfira";
+                this.name = "Dragão Safira Irritado";
                 this.maxHp = (8 + this.pls) * 5;
                 this.atk = 8 + this.mns2;
                 this.def = 8 + this.pls2;

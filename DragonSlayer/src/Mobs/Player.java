@@ -7,6 +7,7 @@ public class Player extends Characters {
     private int xp = 0;//XP do jogador.
     private int maxXp = 0;//Xp necessária para subir de nível.
     private int pts = 20;//Pontos de habilidade.
+    private boolean alive = true;//
 
     /**
      * @Construtor vazio
@@ -69,9 +70,8 @@ public class Player extends Characters {
      */
     public String showStats() {
         String stats
-                = getName()
-                + "     Nvl: " + getLvl()
-                + "\nPV: " + getHp() + "/" + getMaxHp()
+                = "\n" + getName()
+                + "\nPV: " + getHp() + "/" + getMaxHp() + "     Nvl: " + getLvl()   
                 + "\nAtq: " + getAtk()
                 + "     Def: " + getDef()
                 + "     Vel: " + getSpd()
@@ -108,7 +108,7 @@ public class Player extends Characters {
         this.setDef((int) (p1.getDef() * up));
         this.setSpd((int) (p1.getSpd() * up));
         this.maxXp = this.maxXp * 2;
-        System.out.println("Você subiude nível!\n");
+        System.out.println("\nVocê subiu de nível!\n");
         return p1;
     }
 
@@ -119,7 +119,7 @@ public class Player extends Characters {
      */
     public Player meditade(Player pl) {
         pl.setHp(pl.getMaxHp());//A variável hp receberá o máximo de HP atual do jogador(maxHp).
-        System.out.println("Suas feridas estão curadas!\n");
+        System.out.println("\nTodas as suas feridas foram curadas!\n");
         return pl;
     }
      public int playerAtk(Player pl, Dragons drg){
@@ -127,6 +127,20 @@ public class Player extends Characters {
          damage = (int) (pl.getAtk() * 1.50 - (drg.getDef()));
          //System.out.println(this.getName() + " causou " + damage);
         return damage;
+    }
+
+    /**
+     * @return the alive
+     */
+    public boolean isAlive() {
+        return alive;
+    }
+
+    /**
+     * @param alive the alive to set
+     */
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 
 }
