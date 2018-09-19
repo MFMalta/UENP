@@ -3,23 +3,18 @@ package Mobs.Species;
 import Mobs.Dragons;
 import java.util.Random;
 
-/*
- * Pontos de distribuição 24 por dragão/ id1=atk bb vulcao id2=def bb id3=spd bb
- * id4=hp bb id5=std bb normal
- *
- * ATRIBUTOS: HP = 5* ++/-- *(5*(NÍVEL)) ATK/DEF/SPD = 5 * Lvl
- *
- */
+//Aqui é feita toda a constyyrução dos Dragões Bebês.
 public class Baby extends Dragons {
 
-    //Construtor Vazio//
+    //Construtor Vazio
     public Baby() {
     }
 
-    //Construtor Dragões Bebês 24 pts
+    //Base em 20 pontos.
     public Baby(int dragLvl) {
         int aux = 0;
         Random rand = new Random();
+        //Sorteia um tipo de dragão
         rand = new Random();
         aux = rand.nextInt(3) + 1;
 
@@ -33,7 +28,7 @@ public class Baby extends Dragons {
                 this.id = "BBD-001";
                 this.xpd = 5 * dragLvl;
                 break;
-            case 2://atk++,spd+,def-,hp--
+            case 2://Agressivo
                 this.name = "Dragao Bebê Furioso";
                 this.maxHp = (5 + this.mns2) * 5;
                 this.atk = 5 + this.pls2;
@@ -42,7 +37,7 @@ public class Baby extends Dragons {
                 this.id = "BBD-002";
                 this.xpd = 7 * dragLvl;
                 break;
-            case 3://atk--,spd-,def++,hp+
+            case 3://Defensivo
                 this.name = "Dragao Bebê Irritado";
                 this.maxHp = (5 + this.pls) * 5;
                 this.atk = 5 + this.mns2;

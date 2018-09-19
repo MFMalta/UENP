@@ -42,7 +42,7 @@ class Logs {
                 + "\n-Implementado batalha com o Chefe Ahrmaak."
                 + "\n-Alteração no dano de batalha: atk*2 -> atk*1.25."
                 + "\n-Troca de versão ."
-                + "\n-VERSÃO DEMO 0.7"
+                + "\n-VERSÃO ALPHA 0.1.7"
                 + "\n-Corrigido bug em \"starMenu\", ao clicar para Sair, o jogo iniciava com personagem zerado."
                 + "\n-Corrigdo retorno de PV negativo."
                 + "\n-Adicionado métodos para verificar dano negativo, game over, verificar o PV em batalha."
@@ -50,6 +50,8 @@ class Logs {
                 + "\n-Corrigido looping ao tentar sair, no menu do jogo."
                 + "\n-Alterado nomes dos dragões."
                 + "\n-Alterado pontos de habilidades dos Bsby Dragons: 24 - >20."
+                + "\n-Adicoonado tratamento de exceção, quando digitado letyraao invés de números."
+                + "\nVERSÃO APLHA 0.2.7"
                 + "\n\n";
         return logs;
     }

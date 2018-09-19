@@ -3,12 +3,12 @@ package Mobs.Species;
 import Mobs.Dragons;
 import java.util.Random;
 
+//Aqui é feita toda a constyyrução dos Dragões Sábios.
 public class Elder extends Dragons {
+    //Construtor Vazio
     public Elder() {
-    }
-
-    ;
-    //48 pontos
+    };
+    //Base em 48 pontos
      public Elder(int dragLvl) {
         int aux = 0;
         Random rand = new Random();

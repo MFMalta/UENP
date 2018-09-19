@@ -85,7 +85,7 @@ public class Dragons extends Characters {
         return mns2;
     }
 
-    //Nivela os dragões
+    //Nivela os dragões com base em 25% sobre as habilidades atuais.
     public Dragons dragLvl(Dragons drg, int drlv) {
         double up = 1.25;
         for (int i = 1; i < drlv; i++) {
@@ -98,11 +98,11 @@ public class Dragons extends Characters {
         return drg;
     }
 
-    //Método que faz o dragão atacar
+    //Método que faz o dragão atacar.
     public int dragonAtk(Player pl, Dragons drg) {
         int damage = 0;
         damage = (int) (drg.getAtk() * 1.50 - (pl.getDef()));
-       // System.out.println(this.getName() + " causou " + damage);
+       // System.out.println(this.getName() + " causou " + damage); DEV
         return damage;
     }
 }

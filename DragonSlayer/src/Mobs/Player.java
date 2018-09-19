@@ -7,15 +7,13 @@ public class Player extends Characters {
     private int xp = 0;//XP do jogador.
     private int maxXp = 0;//Xp necessária para subir de nível.
     private int pts = 20;//Pontos de habilidade.
-    private boolean alive = true;//
+    private boolean alive = true;//Vivo ou morto.
 
     /**
      * @Construtor vazio
      */
     public Player() {
-    }
-
-    ;
+    };
     
     //********ENCAPSULAMENTO**********//
     /**
@@ -63,15 +61,26 @@ public class Player extends Characters {
         this.maxXp = maxXp;
     }
 
+     /**
+     * @return the alive
+     */
+    public boolean isAlive() {
+        return alive;
+    }
+
+    /**
+     * @param alive the alive to set
+     */
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+    
     //***********MÉTODOS****************//
     //Método para exibir as habilidades do jogador
-    /**
-     * @return
-     */
     public String showStats() {
         String stats
                 = "\n" + getName()
-                + "\nPV: " + getHp() + "/" + getMaxHp() + "     Nvl: " + getLvl()   
+                + "\nPV: " + getHp() + "/" + getMaxHp() + "     Nvl: " + getLvl()
                 + "\nAtq: " + getAtk()
                 + "     Def: " + getDef()
                 + "     Vel: " + getSpd()
@@ -79,12 +88,7 @@ public class Player extends Characters {
         return stats;
     }
 
-    //Método para verificar a exp. do jogador
-    /**
-     * @param pl
-     * @return
-     * @Método para verificar a experiência do jogador
-     */
+    //Método para verificar a exp. do jogador.
     public Player verifyXp(Player pl) {
         if (pl.getXp() >= pl.getMaxXp()) {
             pl = lvlUp(pl);
@@ -93,10 +97,7 @@ public class Player extends Characters {
         return pl;
     }
 
-    //Método para subir o nível do jogador
-    /**
-     *
-     */
+    //Método para subir o nível do jogador.
     private Player lvlUp(Player p1) {
         double up = 1.25;
 
@@ -113,34 +114,16 @@ public class Player extends Characters {
     }
 
     //Método para restaurar HP, MP, etc.
-    /**
-     * @param pl
-     * @return
-     */
     public Player meditade(Player pl) {
         pl.setHp(pl.getMaxHp());//A variável hp receberá o máximo de HP atual do jogador(maxHp).
         System.out.println("\nTodas as suas feridas foram curadas!\n");
         return pl;
     }
-     public int playerAtk(Player pl, Dragons drg){
-         int damage = 0;
-         damage = (int) (pl.getAtk() * 1.50 - (drg.getDef()));
-         //System.out.println(this.getName() + " causou " + damage);
+    //Método de ataque do jogador.
+    public int playerAtk(Player pl, Dragons drg) {
+        int damage = 0;
+        damage = (int) (pl.getAtk() * 1.50 - (drg.getDef()));
+        //System.out.println(this.getName() + " causou " + damage);
         return damage;
     }
-
-    /**
-     * @return the alive
-     */
-    public boolean isAlive() {
-        return alive;
-    }
-
-    /**
-     * @param alive the alive to set
-     */
-    public void setAlive(boolean alive) {
-        this.alive = alive;
-    }
-
 }

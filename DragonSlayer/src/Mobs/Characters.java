@@ -1,6 +1,6 @@
 package Mobs;
 
-//CLASSE PAI DE DRAGONS E PLAYER
+//Aqui contém todas as variáveis básicas para os personagens.
 public abstract class Characters {
     
     /*VARIÁVEIS DOS PERSONAGENS, JOGADOR E INIMIGOS*/
